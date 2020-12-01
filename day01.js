@@ -38,7 +38,7 @@ const computeSecondStar = () => {
     }
 }
 
-readInterface.on('close', function(line) {
+readInterface.on('close', _ => {
     console.log(computeFirstStart());
     console.log(computeSecondStar());
 });
