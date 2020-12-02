@@ -8,8 +8,7 @@ const fs = require('fs');
 const readline = require('readline');
 const lines = [];
 const readInterface = readline.createInterface({
-    input: fs.createReadStream('./input1.txt'),
-    console: false
+    input: fs.createReadStream('./input01.txt'),
 });
 
 readInterface.on('line', function(line) {

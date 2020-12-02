@@ -4,7 +4,6 @@ let validPasswordFirstStar = 0;
 let validPasswordSecondStar = 0;
 const readInterface = readline.createInterface({
     input: fs.createReadStream('./input02.txt'),
-    console: false
 });
 
 readInterface.on('line', function(line) {
@@ -15,13 +14,13 @@ readInterface.on('line', function(line) {
     const letter = tokens[1].replace(':', '');
     const passwordToCheck = tokens[2];
     //first star
-    let nbOfLetter = 0;
+    let nbOfLetters = 0;
     for(let i = 0; i < passwordToCheck.length; ++i) {
         if(passwordToCheck[i] === letter) {
-            nbOfLetter++;
+            nbOfLetters++;
         }
     }
-    if(nbOfLetter >= firstNumber && nbOfLetter <= secondNumber) {
+    if(nbOfLetters >= firstNumber && nbOfLetters <= secondNumber) {
         validPasswordFirstStar++;
     }
     //second star
