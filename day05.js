@@ -1,6 +1,5 @@
 const fs = require('fs');
 const readline = require('readline');
-const { checkServerIdentity } = require('tls');
 const readInterface = readline.createInterface({
     input: fs.createReadStream('./input05.txt'),
 });
