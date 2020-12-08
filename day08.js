@@ -1,4 +1,3 @@
-const { triggerAsyncId } = require('async_hooks');
 const fs = require('fs');
 const readline = require('readline');
 const readInterface = readline.createInterface({
