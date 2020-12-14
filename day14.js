@@ -118,8 +118,7 @@ const computePermutation = (number, idx) => {
     if(number[idx] === 'X') {
       const before = number.substring(0, idx);
       const after = number.substring(idx + 1);
-      const permutations = [`${before}0${after}`,`${before}1${after}`,
-      ];
+      const permutations = [`${before}0${after}`,`${before}1${after}`];
       return permutations.flatMap(singlePerm => [...computePermutation(singlePerm, idx + 1)]);
     }
     return computePermutation(number, idx + 1);
